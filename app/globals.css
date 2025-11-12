@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-app-neutral-900: #051513;
+  --color-app-neutral-800: #4c5c59;
+  --color-app-neutral-500: #899492;
+  --color-app-neutral-400: #c0cfcc;
+  --color-app-neutral-300: #dde9e7;
+  --color-app-neutral-100: #e8f0ef;
+  --color-app-neutral-0: #ffffff;
+
+  --color-app-neutral-dark-900: #001414;
+  --color-app-neutral-dark-800: #001f1f;
+  --color-app-neutral-dark-600: #002e2d;
+  --color-app-neutral-dark-500: #004241;
+  --color-app-neutral-dark-400: #004746;
+  --color-app-neutral-dark-300: #00706e;
+  --color-app-neutral-dark-100: #b1b9b9;
+  --color-app-neutral-dark-0: #ffffff;
+
+  --color-app-teal-700: #014745;
+  --color-app-teal-800: #013c3b;
+
+  --color-app-red-600: #fd4740;
+  --color-app-red-800: #cb0a04;
+
+  --font-manrope: var(--font-manrope);
+}
+
+@utility text-preset-1 {
+  font-family: var(--font-manrope);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+
+@utility text-preset-2 {
+  font-family: var(--font-manrope);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0px;
+}
+
+@utility text-preset-2--semibold {
+  font-family: var(--font-manrope);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0px;
+}
+
+@utility text-preset-3 {
+  font-family: var(--font-manrope);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+
+@utility text-preset-3--medium {
+  font-family: var(--font-manrope);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0px;
+}
+
+@utility text-preset-4 {
+  font-family: var(--font-manrope);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+
+@utility text-preset-4--medium {
+  font-family: var(--font-manrope);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+
+@utility text-preset-5 {
+  font-family: var(--font-manrope);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
