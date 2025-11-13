@@ -5,18 +5,20 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
   {
     variants: {
       variant: {
         default: "bg-app-teal-700 text-app-neutral-0 hover:bg-app-teal-800",
+        nav: "bg-app-neutral-0 text-app-neutral-800 hover:bg-app-neutral-100 hover:text-app-neutral-900",
         outline:
           "text-app-neutral-900 border border-app-neutral-400 bg-app-neutral-0 hover:bg-app-neutral-100",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
       },
       size: {
-        default: "h-11 px-3",
+        default: "h-10 px-3 py-2 rounded-md",
+        md: "h-11 px-3",
         lg: "h-12 px-4",
       },
     },

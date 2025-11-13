@@ -1,4 +1,6 @@
+import { Header } from "@/components/layout/header";
 import { Menu } from "@/components/layout/menu";
+import { SidebarProvider } from "@/contexts/sidebar";
 
 export default function DashboardLayout({
   children,
@@ -6,9 +8,12 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="grid grid-cols-[auto_1fr]">
-      <Menu />
-      {children}
-    </div>
+    <SidebarProvider>
+      <Menu className="hidden md:flex" />
+      <div className="grid grid-rows-[auto_1fr]">
+        <Header />
+        {children}
+      </div>
+    </SidebarProvider>
   );
 }
