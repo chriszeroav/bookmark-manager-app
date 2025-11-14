@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import {
   createContext,
   FC,
@@ -49,7 +50,13 @@ export const SidebarProvider: FC<SidebarProviderProps> = ({ children }) => {
         updateSidebar,
       }}
     >
-      <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] h-screen overflow-hidden">
+      <div
+        className={cn(
+          "grid grid-cols-1 md:grid-cols-[auto_1fr]",
+          "h-screen overflow-hidden",
+          "bg-app-neutral-100 dark:bg-app-neutral-dark-900"
+        )}
+      >
         {children}
       </div>
     </SidebarContext.Provider>

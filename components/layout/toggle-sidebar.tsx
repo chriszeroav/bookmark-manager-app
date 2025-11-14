@@ -28,7 +28,7 @@ export const ToggleSidebar: FC<ToggleSidebarProps> = ({ className }) => {
           <DrawerTitle>Are you absolutely sure?</DrawerTitle>
           <DrawerDescription>This action cannot be undone.</DrawerDescription>
         </DrawerHeader>
-        <Menu />
+        <Menu className="h-full" />
       </DrawerContent>
     </Drawer>
   );

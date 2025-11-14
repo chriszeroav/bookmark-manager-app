@@ -56,6 +56,7 @@ export const Login: FC<LoginProps> = () => {
   const handleLoginWithGoogle = async () => {
     await authClient.signIn.social({
       provider: "google",
+      callbackURL: "/dashboard",
     });
   };
 

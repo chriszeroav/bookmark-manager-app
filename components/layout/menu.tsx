@@ -13,13 +13,22 @@ export const Menu: FC<MenuProps> = ({ className }) => {
     <aside
       className={cn(
         "flex flex-col gap-4 w-[296px]",
-        "border-r border-app-neutral-300",
-        "bg-app-neutral-0",
+        "border-r border-app-neutral-300 dark:border-app-neutral-dark-500",
+        "bg-app-neutral-0 dark:bg-app-neutral-dark-800",
         className
       )}
     >
       <header className="px-5 pt-5 pb-2.5">
-        <img src="/logo-light-theme.svg" alt="Logo" />
+        <img
+          className="block dark:hidden"
+          src="/logo-light-theme.svg"
+          alt="Logo"
+        />
+        <img
+          className="hidden dark:block"
+          src="/logo-dark-theme.svg"
+          alt="Logo"
+        />
       </header>
 
       <div className="flex flex-col gap-4 px-4 pb-5">
