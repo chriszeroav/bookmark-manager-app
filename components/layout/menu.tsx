@@ -3,12 +3,14 @@ import Link from "next/link";
 import { FC } from "react";
 import { ArchiveIcon, HomeLineIcon } from "@/components/icons";
 import { buttonVariants } from "@/components/shadcn/button";
+import { AddTag } from "@/components/layout/add-tag";
+import { Tags } from "@/components/layout/tags";
 
 interface MenuProps {
   className?: string;
 }
 
-export const Menu: FC<MenuProps> = ({ className }) => {
+export const Menu: FC<MenuProps> = async ({ className }) => {
   return (
     <aside
       className={cn(
@@ -37,7 +39,7 @@ export const Menu: FC<MenuProps> = ({ className }) => {
           <Link
             href="/dashboard"
             className={buttonVariants({
-              variant: "nav",
+              variant: "ghost",
               className: "justify-start",
             })}
           >
@@ -47,7 +49,7 @@ export const Menu: FC<MenuProps> = ({ className }) => {
           <Link
             href="/dashboard/archivados"
             className={buttonVariants({
-              variant: "nav",
+              variant: "ghost",
               className: "justify-start",
             })}
           >
@@ -57,7 +59,15 @@ export const Menu: FC<MenuProps> = ({ className }) => {
         </section>
 
         {/* TAGS */}
-        <section></section>
+        <section className="flex flex-col gap-3">
+          <header className="flex items-center justify-between px-3 pb-1">
+            <p className="text-preset-4--medium text-app-neutral-800 dark:text-app-neutral-dark-100">
+              Etiquetas
+            </p>
+            <AddTag />
+          </header>
+          <Tags />
+        </section>
       </div>
     </aside>
   );

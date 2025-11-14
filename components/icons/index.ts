@@ -6,3 +6,4 @@ export * from "./sun";
 export * from "./moon";
 export * from "./log-out";
 export * from "./plus";
+export * from "./checkmark";
